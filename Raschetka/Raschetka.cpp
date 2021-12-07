@@ -105,6 +105,7 @@ int main()
             st2.pop();
         }
         if (lastelement != flip1.top()) { goto error; }
+        if (req < edgeq) { goto error; }
     }
     if (tp == 2)                            //не ориентированный граф
     {
@@ -181,7 +182,7 @@ int main()
         }
         if(lastelement != st2.top()){ goto error; }
         cout << endl;
-        if (req < edgeq - 1) { goto error; }
+        if (req < edgeq) { goto error; }
     }
   if (tp!=1 && tp != 2) { goto error; }
 
